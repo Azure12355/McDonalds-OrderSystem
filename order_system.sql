@@ -14,6 +14,13 @@
  Date: 29/02/2024 19:53:55
 */
 
+drop database if exists `mcdonald_ordersystem`;
+
+create database `mcdonald_ordersystem`;
+
+use `mcdonald_ordersystem`;
+
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
