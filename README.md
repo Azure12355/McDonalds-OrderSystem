@@ -12,3 +12,12 @@
 - 进入到 `ui` 目录下, 运行 `python login_windows.py` 指令
 
 ## 运行效果
+1. 登录界面![img.png](运行效果截图/img.png)
+2. 首页![img_1.png](运行效果截图/img_1.png)
+3. 优惠套餐页面![img_2.png](运行效果截图/img_2.png)
+4. 精选套餐页面![img_3.png](运行效果截图/img_3.png)
+5. 点餐页面![img_4.png](运行效果截图/img_4.png)
+6. 选购页面![img_5.png](运行效果截图/img_5.png)
+7. 购物车页面![img_6.png](运行效果截图/img_6.png)
+8. 订单支付结算页面![img_7.png](运行效果截图/img_7.png)
+9. 订单管理页面![img_8.png](运行效果截图/img_8.png)
