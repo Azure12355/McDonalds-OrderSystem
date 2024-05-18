@@ -1,0 +1,81 @@
+QLineEdit#menu_order_search_edit {
+    padding-left:10px;
+    font-size: 15px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #eaf0fb, stop:1 #f8eef7);
+    border: 1px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+
+QPushButton#menu_order_search_btn {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fc3b5b, stop:1 #fd3e4a);
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 100px;
+}
+
+QPushButton#menu_order_search_btn:hover {
+    background-color: rgba(253, 61, 79, 180);
+}
+
+QWidget {
+    background-color: transparent;
+    border:0px
+}
+
+QListWidget{
+    /*侧边栏样式*/
+/*    background-color: rgba(240, 243, 246, 255);*/
+    background-color: transparent;
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: 0px;
+}
+
+QListWidget::item {
+    font-size: 30px;
+    color: #4d5769;
+    font-family: "微软雅黑";
+    font-weight: normal;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border: 1px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+    border-radius: 15px;
+}
+
+QListWidget::item:selected {
+    color: white;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ffd054, stop:1 #ffbc0d);
+    border-radius: 15px;
+}
+
+QListWidget::item:selected:hover{
+    color: white;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ffd054, stop:1 #ffbc0d);
+    border-radius: 15px;
+    font-weight: bold;
+}
+QListWidget::item:hover {
+    background-color: #e4e8ec;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+QWidget#bottom_widget {
+    border: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+}
+
+QGroupBox {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-family: "幼圆";
+    font-size: 20px;
+    font-weight: bold;
+}

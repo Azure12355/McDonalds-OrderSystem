@@ -1,0 +1,131 @@
+#increase_btn, #reduce_btn {
+    background-color: rgba(255, 188, 13, 255);
+    border-radius: 10px;
+}
+
+#increase_btn:hover, #reduce_btn:hover {
+    background-color: rgba(255, 188, 13, 180);
+}
+
+#dish_quantity {
+    background-color: transparent;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "微软雅黑";
+    padding-left: 5px;
+}
+
+#delete_btn {
+    height: 30px;
+    background-color: rgba(255, 188, 13, 255);
+    border:0px;
+    border-radius:15px;
+    font-size: 13px;
+}
+
+QPushButton#delete_btn:hover {
+    height: 30px;
+    background-color: rgba(255, 188, 13, 180);
+    border:0px;
+    border-radius:15px;
+    font-size: 13px;
+}
+
+/*购物车项的封面*/
+#shopping_cart_item_cover {
+    background-color: transparent;
+}
+
+#shopping_cart_item_price {
+    font-size:25px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    text-align: left;
+    margin-right: 150px;
+    background-color: transparent;
+}
+
+#shopping_cart_item_title {
+    font-size:20px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    background-color: transparent;
+}
+
+#shopping_cart_item {
+   border: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+}
+
+QPushButton#title {
+    background-color: transparent;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 18px;
+}
+
+QPushButton#title:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+    border: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+    border-radius: 10px;
+}
+
+QLabel#info {
+    text-align: center;
+    background-color: transparent;
+}
+
+QLabel#checkout_price {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    color: white;
+    background-color: transparent;
+    padding-left: 30px;
+}
+
+QPushButton#checkout_btn {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+QPushButton#checkout_btn:hover {
+    background-color: rgba(255, 255, 255, 80);
+}
+
+QWidget#checkout_widget {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fc3b5b, stop:1 #fd3e4a);
+    padding-right: 30px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+
+QPushButton#empty_btn {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fc3b5b, stop:1 #fd3e4a);
+    border-radius: 10px;
+    margin: 0px;
+    border: 0px solid black;
+}
+
+QPushButton#empty_btn:hover {
+    background-color: rgba(253, 61, 80, 180)
+}
+
+/*滚动布局*/
+QScrollArea {
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+}
+
+

@@ -1,0 +1,25 @@
+QScrollArea {
+    border: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+}
+
+#latest_offer_box{
+        background-color: white;
+        border-radius: 10px;
+}
+
+QLabel#latest_offer_desc {
+    text-align: center;
+}
+
+QPushButton#latest_offer_buy {
+    height: 30px;
+    width: 70px;
+    background-color: rgba(255, 188, 13, 255);
+    border:0px;
+    border-radius:15px;
+    font-size: 13px
+}
+
+QPushButton#latest_offer_buy:hover {
+   background-color: rgba(255, 188, 13, 180);
+}

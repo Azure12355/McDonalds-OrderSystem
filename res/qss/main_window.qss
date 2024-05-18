@@ -1,0 +1,56 @@
+QMainWindow {
+    border: 1px solid red;
+    border-radius: 20px;
+    background: transparent;
+}
+.QWidget{
+    padding: 0px;
+    margin: 0px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #eaf0fb, stop:1 #f8eef7);
+    border-radius: 10px;
+}
+
+QPushButton#icon_btn {
+    background-color: transparent;
+    color: rgba(255, 187, 0, 255);
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "微软雅黑";
+}
+
+QLabel#top_bar {
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "微软雅黑";
+}
+
+QScrollBar:vertical {
+    border: 0px solid transparent; /* 滚动条边框样式 */
+    background: transparent; /* 滚动条背景色 */
+    width: 6px; /* 滚动条宽度 */
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(253, 62, 75, 255); /* 滚动条滑块背景色 */
+    min-height: 40px; /* 滑块的最小高度 */
+    width: 1px;
+    border-radius: 3px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    border: none; /* 隐藏垂直滚动条箭头 */
+    height: 0;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none; /* 隐藏垂直滚动条空白区域 */
+}
+

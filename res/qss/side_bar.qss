@@ -1,0 +1,42 @@
+QWidget#side_bar {
+    background-color: #f0f3f6;
+/*    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fc3b5b, stop:1 #fd3e4a);*/
+    margin-right: 0px;
+}
+QListWidget{
+    /*侧边栏样式*/
+    background-color: rgba(221, 0, 9, 200);
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: 0px;
+}
+
+QListWidget::item {
+    font-size: 30px;
+    color: #4d5769;
+    font-family: "微软雅黑";
+    font-weight: normal;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+QListWidget::item:selected {
+    color: white;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fc3b5b, stop:1 #fd3e4a);
+    border-radius: 15px;
+}
+
+QListWidget::item:selected:hover{
+    color: white;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fc3b5b, stop:1 #fd3e4a);
+    border-radius: 15px;
+    font-weight: bold;
+}
+QListWidget::item:hover {
+    background-color: #e4e8ec;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+

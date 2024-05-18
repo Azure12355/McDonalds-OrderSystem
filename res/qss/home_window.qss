@@ -1,0 +1,16 @@
+QGroupBox {
+    border: 0px solid white;
+    padding-top: 20px;
+    font-family: "微软雅黑";
+    font-size: 20px;
+}
+
+QScrollArea {
+    border: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+    border-radius: 10px;
+}
+
+QWidget {
+    border-radius: 10px;
+    background-color: transparent;
+}

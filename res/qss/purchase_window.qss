@@ -1,0 +1,130 @@
+
+QScrollBar:vertical {
+    border: 0px solid transparent; /* 滚动条边框样式 */
+    background: transparent; /* 滚动条背景色 */
+    width: 6px; /* 滚动条宽度 */
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(253, 62, 75, 255); /* 滚动条滑块背景色 */
+    min-height: 40px; /* 滑块的最小高度 */
+    width: 1px;
+    border-radius: 3px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    border: none; /* 隐藏垂直滚动条箭头 */
+    height: 0;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none; /* 隐藏垂直滚动条空白区域 */
+}
+
+QWidget#dish_box_widget {
+    border: 1px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+    border-radius: 10px;
+
+}
+
+QWidget#dish_box_widget QLabel {
+    font-family: "微软雅黑";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+QLabel {
+    background-color: white;
+}
+
+QWidget#order_info_widget{
+    background-color: white;
+}
+
+#order_info_widget QScrollArea {
+    border: 0px solid white;
+    border-radius: 10px;
+}
+
+#order_info_widget QWidget {
+    background-color: white;
+    border-radius: 10px;
+}
+
+#order_info_widget {
+    border-radius: 10px;
+}
+
+QWidget#restaurant_info_widget{
+    background-color: white;
+    border-radius: 10px;
+    spacing: 20px;
+    padding: 10px;
+}
+
+QWidget#restaurant_info_widget QLabel {
+    font-family: "微软雅黑";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+QWidget#payment_widget {
+    background-color: rgba(58, 58, 58, 255);
+    border-radius: 25px;
+}
+
+QLabel#total_price_label {
+    font-family: "微软雅黑";
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    padding-left: 20px;
+}
+
+QPushButton#payment_btn {
+    font-family: "微软雅黑";
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(255, 189, 17, 255);
+    border-radius: 25px;
+}
+
+QPushButton#payment_btn:hover {
+    background-color: rgba(255, 189, 17, 180);
+}
+
+QLabel#price_amount {
+    font-family: "微软雅黑";
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+}
+
+QToolButton#payment_method_btn:checked {
+    border: 2px solid orange;
+    font-family: "微软雅黑";
+    font-size: 15px;
+    font-weight: normal;
+}
+
+QToolButton#payment_method_btn {
+    font-family: "微软雅黑";
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+
+QPushButton#confirm_payment_button {
+    font-family: "微软雅黑";
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(255, 189, 17, 255);
+    border-radius: 25px;
+}

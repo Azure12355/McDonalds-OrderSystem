@@ -1,0 +1,16 @@
+QLabel {
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: "微软雅黑";
+
+}
+
+QWidget#order_management_main_widget {
+     border: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+    border-radius: 10px;
+}
+
+QScrollArea {
+    border: 0px solid transparent;
+}

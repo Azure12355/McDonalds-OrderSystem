@@ -1,0 +1,3 @@
+QScrollArea {
+    border: 2px solid rgba(253, 61, 77, 100);
+}

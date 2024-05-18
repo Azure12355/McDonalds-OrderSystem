@@ -1,0 +1,36 @@
+#package_details {
+    background-color: transparent;
+    border: 3px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+    border-radius: 10px;
+}
+
+#package_details_discount {
+    color: white;
+    font-size: 15px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fc3b5b, stop:1 #dd0009);
+    border: 0px;
+    border-radius: 3px;
+}
+
+#package_details_current{
+    font-size:25px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+
+#package_details_origin{
+    font-size: 15px;
+}
+
+#package_details_buy {
+    height: 30px;
+    width: 70px;
+    background-color: rgba(255, 188, 13, 255);
+    border:0px;
+    border-radius:15px;
+    font-size: 13px
+}
+
+QPushButton#package_details_buy:hover {
+   background-color: rgba(255, 188, 13, 180);
+}

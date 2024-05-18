@@ -1,0 +1,58 @@
+#login_window {
+    background-color: white;
+}
+
+#title {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "微软雅黑";
+}
+
+#account_label,#password_label {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    margin-left: 10px;
+}
+
+QLineEdit {
+    font-size: 15px;
+    height: 30px;
+    border: 1px solid rgb(12,12,12) ;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+#login_btn {
+    font-size: 15px;
+    height: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-color: transparent;
+    border-radius: 20px;
+    background-color: rgba(255, 188, 13, 255);
+    margin-bottom: 0px;
+}
+QPushButton#login_btn:hover {
+    background-color: rgba(255, 188, 13, 200);
+}
+
+QPushButton#forget_btn {
+    background-color: rgba(255, 188, 13, 200);
+    border-color: transparent;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 10px;
+    margin-left: 25px;
+    margin-top: 0px;
+}
+
+QPushButton#register_btn {
+    background-color: rgba(255, 188, 13, 200);
+    border-color: transparent;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 10px;
+    margin-right: 25px;
+    margin-top: 0px;
+}

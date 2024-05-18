@@ -1,0 +1,12 @@
+QWidget#dish_details_box_main_widget {
+    border: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d9e7f9, stop:1 #f6e2f2);
+}
+
+QLabel#dish_details_box_title, #dish_details_box_price{
+    background-color: transparent;
+    font-weight: bold;
+}
+
+QLabel#dish_details_box_cover {
+    background-color: transparent;
+}
