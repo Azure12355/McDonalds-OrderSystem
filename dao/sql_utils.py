@@ -152,19 +152,28 @@ class UserManager:
             print(f"Error changing password: {err}")
             return False
 
-    def is_email_registered(self, email) -> bool:
-        # 检查邮箱是否已经注册
+    def is_email_registered(self, email: str) -> bool:
+        """
+        检查邮箱是否已经注册
+
+        参数:
+        email (str): 要检查的邮箱地址
+
+        返回:
+        bool: 如果邮箱已注册则返回True，否则返回False
+        """
+        # 调用存储函数的查询语句
         check_query = """
-            SELECT COUNT(*)
-            FROM user
-            WHERE user_email = %s
+            SELECT is_email_registered_func(%s)
         """
         check_data = (email,)
 
+        # 执行查询
         result = self.db_connector.execute_query(check_query, check_data)
 
+        # 检查查询结果并返回布尔值
         if result and len(result) > 0:
-            return result[0][0] > 0
+            return result[0][0]
         else:
             return False
 
@@ -240,14 +249,41 @@ class UserManager:
         else:
             print("未找到该商家。")
 
-    def is_user_exist(self, user_id):
-        query = "SELECT * FROM User WHERE user_id = %s"
-        result = self.db_connector.execute_query(query, (user_id,))
-        return bool(result)
+    def is_user_exist(self, user_id: int) -> bool:
+        """
+        检查用户是否存在
 
-    def is_merchant_exist(self, merchant_id):
-        query = "SELECT * FROM Merchant WHERE merchant_id = %s"
+        参数:
+        user_id (int): 要检查的用户ID
+
+        返回:
+        bool: 如果用户存在则返回True，否则返回False
+        """
+        # 调用存储过程的查询语句
+        query = "CALL is_user_exist_proc(%s)"
+        result = self.db_connector.execute_query(query, (user_id,))
+
+        # 检查查询结果并返回布尔值
+        if result and len(result) > 0:
+            return result[0][0] > 0
+        else:
+            return False
+
+    def is_merchant_exist(self, merchant_id: int) -> bool:
+        """
+        检查商家是否存在
+
+        参数:
+        merchant_id (int): 要检查的商家ID
+
+        返回:
+        bool: 如果商家存在则返回True，否则返回False
+        """
+        # 查询视图的查询语句
+        query = "SELECT * FROM merchant_view WHERE merchant_id = %s"
         result = self.db_connector.execute_query(query, (merchant_id,))
+
+        # 检查查询结果并返回布尔值
         return bool(result)
 
     def is_dish_exist(self, dish_id):
@@ -285,9 +321,15 @@ class UserManager:
 
         print("下单成功。")
 
-    def view_order_status(self, user_id):
-        # 查询用户的所有订单信息
-        query = "SELECT * FROM OrderTable WHERE user_id = %s"
+    def view_order_status(self, user_id: int):
+        """
+        查询用户的所有订单信息并打印
+
+        参数:
+        user_id (int): 用户ID
+        """
+        # 调用存储过程的查询语句
+        query = "CALL view_order_status_proc(%s)"
         orders = self.db_connector.execute_query(query, (user_id,))
 
         # 打印订单状态信息
@@ -295,10 +337,12 @@ class UserManager:
             print("订单状态信息：")
             for order in orders:
                 print(f"订单ID: {order[0]}")
-                print(f"商家ID: {order[2]}")
-                print(f"菜品ID: {order[3]}")
-                print(f"下单时间: {order[4]}")
-                print(f"订单状态: {order[5]}")
+                print(f"商家ID: {order[1]}")
+                print(f"菜品ID: {order[2]}")
+                print(f"下单时间: {order[3]}")
+                print(f"订单状态: {order[4]}")
+                print(f"折扣类型: {order[5]}")
+                print(f"折扣金额: {order[6]}")
                 print("--------------------")
         else:
             print("您还没有下过单。")
