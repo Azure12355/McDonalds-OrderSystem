@@ -17,6 +17,9 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
+CREATE DATABASE mcdonald_ordersystem;
+USE mcdonald_ordersystem;
+
 -- ----------------------------
 -- Table structure for affordable_packages
 -- ----------------------------
@@ -480,3 +483,73 @@ INSERT INTO `userreview` VALUES (1, 1, 1, 4, '好吃！', '2024-01-05 10:00:00')
 INSERT INTO `userreview` VALUES (2, 2, 2, 5, '非常好！', '2024-01-06 11:30:00');
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+
+CREATE FUNCTION is_email_registered_func(email VARCHAR(255)) RETURNS BOOLEAN
+READS SQL DATA
+BEGIN
+    DECLARE count INT;
+    SELECT COUNT(*)
+    INTO count
+    FROM user
+    WHERE user_email = email;
+    RETURN count > 0;
+END;
+
+DELIMITER //
+
+CREATE PROCEDURE is_user_exist_proc(IN user_id_param INT)
+BEGIN
+    SELECT COUNT(*)
+    FROM user
+    WHERE user_id = user_id_param;
+END //
+
+DELIMITER ;
+
+
+DELIMITER //
+
+CREATE PROCEDURE view_order_status_proc(IN user_id_param INT)
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE order_id INT;
+    DECLARE merchant_id INT;
+    DECLARE dish_id INT;
+    DECLARE order_time DATETIME;
+    DECLARE order_status VARCHAR(20);
+    DECLARE discount_type VARCHAR(50);
+    DECLARE discount_amount DECIMAL(10, 2);
+
+    -- Declare the cursor
+    DECLARE order_cursor CURSOR FOR
+        SELECT order_id, merchant_id, dish_id, order_time, order_status, discount_type, discount_amount
+        FROM ordertable
+        WHERE user_id = user_id_param;
+
+    -- Declare the continue handler
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+
+    -- Open the cursor
+    OPEN order_cursor;
+
+    -- Loop to fetch each row
+    read_loop: LOOP
+        FETCH order_cursor INTO order_id, merchant_id, dish_id, order_time, order_status, discount_type, discount_amount;
+        IF done THEN
+            LEAVE read_loop;
+        END IF;
+        SELECT order_id, merchant_id, dish_id, order_time, order_status, discount_type, discount_amount;
+    END LOOP;
+
+    -- Close the cursor
+    CLOSE order_cursor;
+END //
+
+DELIMITER ;
+
+CREATE VIEW merchant_view AS
+SELECT *
+FROM Merchant;
+
+

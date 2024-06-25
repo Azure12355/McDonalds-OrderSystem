@@ -5,7 +5,7 @@ from dao.sql_utils import UserManager, DatabaseConnector
 class Client:
 
     def __init__(self):
-        self.dbConnector = DatabaseConnector("localhost", "root", "azure", "mcdonald_ordersystem")
+        self.dbConnector = DatabaseConnector("localhost", "root", "957364xu", "mcdonald_ordersystem")
         self.userManager = UserManager(self.dbConnector)
 
     def getAllDishes(self) -> dict:
